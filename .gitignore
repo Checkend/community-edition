@@ -1,0 +1,17 @@
+# Environment files with secrets
+.env
+
+# Docker Compose override (user-specific configuration)
+compose.override.yml
+
+# Cloned Checkend source (created by setup.sh)
+checkend/
+
+# macOS
+.DS_Store
+
+# Editor directories
+.idea/
+.vscode/
+*.swp
+*.swo

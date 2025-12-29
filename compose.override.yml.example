@@ -1,0 +1,18 @@
+# Copy this file to compose.override.yml to customize your deployment.
+#
+# For direct hosting with automatic SSL:
+#   cp compose.override.yml.example compose.override.yml
+#   # Edit .env to set THRUSTER_TLS_DOMAIN
+#
+# For reverse proxy (nginx, Caddy, Traefik):
+#   Expose only port 80 and handle SSL at the proxy level.
+
+services:
+  checkend:
+    ports:
+      # Expose HTTP and HTTPS for Thruster's built-in SSL
+      - "80:80"
+      - "443:443"
+    environment:
+      # Set your domain for automatic Let's Encrypt SSL
+      - THRUSTER_TLS_DOMAIN=${THRUSTER_TLS_DOMAIN:-}
